@@ -1,0 +1,24 @@
+SKYCITY AUCKLAND RESTAURANT PORTFOLIO
+Meeting Points
+
+KEY FINDINGS
+
+- The dataset records $77.74 million in revenue and $7.87 million in net profit, an aggregate margin of 10.1%. The currency and reporting period are not specified.
+- Full-service requires closer review: 408 of 452 records in this format are loss-making, with an aggregate margin of -5.8%. These are all the loss-making records in the dataset.
+- Uber Eats and DoorDash account for 61.2% of recorded revenue but have a combined calculated net margin of 0.86%. In-store and self-delivery margins are 26.8% and 22.9%, respectively.
+- Regional margins are relatively close, from 9.5% in the CBD to 10.5% in West Auckland. Differences by format are more pronounced in this dataset.
+
+RECOMMENDED DISCUSSION
+
+1. Validate the underlying channel-profit and cost-allocation calculations.
+2. Review Full-service performance at outlet level before making broad portfolio decisions.
+3. Examine platform fees, delivery costs, and channel contribution before changing channel strategy.
+4. Add verified currency, reporting period, and methodology, and collect employment and business-survival data before using these results for public-policy or funding decisions.
+
+MEETING TAKEAWAY
+
+The portfolio is profitable overall, but that headline masks concentrated Full-service losses and thin platform-channel margins. Validate the calculations first, then target a deeper review where the data points.
+
+CAVEAT
+
+This is a single dataset with no stated reporting period, currency, or independently audited methodology. It does not prove that delivery platforms cause lower profitability or represent the wider hospitality sector.

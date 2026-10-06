@@ -1,0 +1,83 @@
+SkyCity Restaurant Portfolio Project
+Executive Stakeholder Roadmap
+
+1. Purpose of the Project
+This project will assess the performance of the SkyCity restaurant portfolio across revenue, profitability, operating costs, and outlet efficiency. The goal is to provide management with clear, evidence-based insight to support commercially sound decisions.
+
+2. Business Objectives
+- Identify the strongest-performing outlets
+- Highlight underperforming venues and root causes
+- Understand key cost drivers affecting margin
+- Benchmark performance across restaurants and categories
+- Turn analysis into actionable recommendations
+
+3. Key Stakeholder Questions
+- Which restaurants are delivering the strongest returns?
+- Which outlets require operational intervention?
+- What is driving profit and loss across the portfolio?
+- Where are the biggest opportunities for cost reduction or revenue growth?
+- Which actions will create the most measurable business impact?
+
+4. Project Phases
+Phase 1: Business scoping and KPI definition
+Expected outcome: Clear objectives and success criteria
+
+Phase 2: Data collection and validation
+Expected outcome: Reliable, clean dataset
+
+Phase 3: Revenue and profit analysis
+Expected outcome: Performance overview by restaurant and period
+
+Phase 4: Cost and margin review
+Expected outcome: Clear drivers of financial performance
+
+Phase 5: Benchmarking and insights
+Expected outcome: Identification of high and low performers
+
+Phase 6: Recommendations and prioritization
+Expected outcome: Actionable improvement plan
+
+Phase 7: Reporting and stakeholder presentation
+Expected outcome: Board-ready summary and decision support
+
+5. Core KPIs
+- Total revenue
+- Gross profit
+- Net profit
+- Profit margin by outlet
+- Cost of goods sold
+- Labor cost percentage
+- Revenue per restaurant
+- Sales trend by month or period
+- Contribution by category or product line
+
+6. Deliverables
+- Cleaned and validated data set
+- Restaurant performance dashboard
+- Profitability and variance analysis
+- Benchmark comparison of outlets
+- Management-ready insight summary
+- Recommendation plan with priority ranking
+
+7. Decision Themes for Management
+- Improve underperforming locations
+- Optimize menu mix and pricing strategy
+- Review cost control and supplier efficiency
+- Improve staffing alignment with demand patterns
+- Focus investment on higher-return operations
+
+8. Recommended Timeline
+Week 1: Project kickoff and scope confirmation
+Week 2: Data audit and validation
+Week 3: Portfolio revenue and profit analysis
+Week 4: Cost and margin analysis
+Week 5: Benchmarking and performance insights
+Week 6: Recommendation and action planning
+Week 7: Dashboard and stakeholder presentation
+Week 8: Final review and sign-off
+
+9. Executive Message
+This project provides a clear view of financial performance across the restaurant portfolio and converts raw operational data into strategic business insight. The outcome will help management improve profitability, reduce inefficiencies, and prioritize the actions that matter most.
+
+10. Final Outcome
+The project will deliver a practical business case for operational improvement and provide stakeholders with a concise, evidence-based roadmap for better decision-making.

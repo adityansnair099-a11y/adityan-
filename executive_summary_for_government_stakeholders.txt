@@ -1,0 +1,19 @@
+SKYCITY AUCKLAND HOSPITALITY PORTFOLIO
+Executive Summary for Government Stakeholders
+
+Headline
+The supplied portfolio dataset records $77.74 million in revenue and $7.87 million in net profit, an aggregate margin of 10.1%. This positive total masks uneven performance: 408 of 1,696 outlet records (24.1%) report a loss, and Full-service is the only segment with a negative aggregate margin.
+
+Key Findings
+- 1,288 outlet records are profitable and 408 are loss-making, based on the supplied channel net-profit fields.
+- Aggregate segment margins are 22.2% for Ghost Kitchen, 16.2% for Cafe, 15.1% for QSR, and -5.8% for Full-service.
+- In-store and self-delivery contribute $3.83 million and $3.63 million, respectively, to recorded channel net profit. Uber Eats contributes $258,488 and DoorDash $151,122.
+- Average order shares across outlet records are 17.5% in-store, 40.3% Uber Eats, 22.0% DoorDash, and 20.1% self-delivery. The dataset reports an average commission rate of 30.0%.
+
+Implications
+The portfolio-wide result should not be used to assume that all restaurant formats are equally viable. The Full-service result warrants closer examination, while the positive segment averages show why support and monitoring should be tailored to business format and outlet-level conditions. Channel mix and commissions are useful indicators to investigate alongside costs, but these aggregate figures do not establish that delivery platforms cause lower profitability.
+
+For public planning or business-support decisions, consider using outlet-level financial diagnostics and transparent channel-cost reporting. Assess any proposed intervention against additional evidence on employment, wages, business survival, local procurement, and neighborhood effects, none of which is measured here.
+
+Data and Method
+Analysis covers 1,696 outlet records in the supplied CSV. Total revenue is the sum of the four channel revenue fields; total net profit is the sum of the four channel net-profit fields. Segment margins are calculated as aggregate segment net profit divided by aggregate segment revenue. The source file does not identify its reporting period, currency, data provenance, or calculation methodology, and the figures have not been independently audited. Treat these results as a portfolio-level diagnostic, not as verified sector-wide or causal evidence.

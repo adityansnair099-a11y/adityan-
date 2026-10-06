@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power BI Mockup - SkyCity Auckland</title>
+  <style>
+    :root {
+      --bg: #0d1a22;
+      --panel: #101f2a;
+      --panel-alt: #152933;
+      --sidebar: #111d25;
+      --card: #1b2a34;
+      --muted: #a0b6bf;
+      --text: #edf2f5;
+      --green: #155b58;
+      --gold: #d18a30;
+      --blue: #427eaa;
+      --red: #bd5b4c;
+      --line: rgba(255,255,255,0.08);
+      --shadow: rgba(0,0,0,0.22);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #0d1a22 0%, #0d1720 100%);
+      padding: 22px 18px 28px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--green); display: inline-block; margin-right: 6px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 16px;
+    }
+
+    .sidebar {
+      background: rgba(17,29,37,0.95);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px 14px;
+      min-height: 760px;
+    }
+
+    .side-title {
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .filter-box {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 10px;
+      margin-bottom: 12px;
+    }
+
+    .filter-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      color: var(--text);
+    }
+
+    .content {
+      background: rgba(19,32,40,0.72);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px;
+      min-height: 760px;
+    }
+
+    .title {
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: 1.06;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin: 0 0 10px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      max-width: 900px;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .kpi {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--green);
+      border-radius: 8px;
+      padding: 14px 16px 10px;
+      min-height: 108px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+
+    .kpi .value {
+      font-size: clamp(1.4rem, 2vw, 2.05rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .info-bar {
+      background: rgba(66,126,170,0.22);
+      border: 1px solid rgba(66,126,170,0.48);
+      color: #dfeef7;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .chart-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 14px 10px;
+      min-height: 260px;
+    }
+
+    .chart-head {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .bar-plot {
+      display: flex;
+      align-items: end;
+      gap: 12px;
+      height: 150px;
+      padding: 18px 8px 0 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .bar-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      height: 100%;
+      gap: 8px;
+    }
+
+    .bar {
+      width: 58%;
+      border-radius: 5px 5px 0 0;
+      background: linear-gradient(180deg, var(--green), var(--blue));
+      min-height: 25px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .label-small {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .donut-wrap {
+      height: 185px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 12px;
+    }
+
+    .donut {
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: conic-gradient(
+        var(--green) 0 30%,
+        var(--gold) 30% 56%,
+        var(--blue) 56% 79%,
+        var(--red) 79% 100%
+      );
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+    }
+
+    .donut::after {
+      content: "";
+      position: absolute;
+      width: 100px; height: 100px;
+      background: var(--panel);
+      border-radius: 50%;
+      top: 30px; left: 30px;
+      border: 1px solid var(--line);
+    }
+
+    .legends {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 10px;
+      margin-top: 8px;
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .swatch {
+      width: 10px; height: 10px; border-radius: 2px; display: inline-block;
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .scatter-box {
+      height: 240px;
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-top: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      overflow: hidden;
+    }
+
+    .axis-x, .axis-y {
+      position: absolute;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .axis-x { left: 20px; right: 20px; bottom: 26px; height: 1px; }
+    .axis-y { top: 18px; bottom: 26px; left: 30px; width: 1px; }
+
+    .point {
+      position: absolute;
+      width: 11px; height: 11px; border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid rgba(255,255,255,0.5);
+      box-shadow: 0 0 0 2px rgba(209,138,48,0.2);
+    }
+
+    .point:nth-child(1) { left: 170px; top: 70px; }
+    .point:nth-child(2) { left: 220px; top: 110px; }
+    .point:nth-child(3) { left: 310px; top: 80px; }
+    .point:nth-child(4) { left: 120px; top: 130px; }
+    .point:nth-child(5) { left: 420px; top: 62px; }
+
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--text);
+    }
+
+    .mini-table th, .mini-table td {
+      text-align: left;
+      padding: 8px 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mini-table th {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 16px;
+      background: rgba(21,91,88,0.22);
+      color: #dff8f5;
+      font-size: 0.72rem;
+      border: 1px solid rgba(21,91,88,0.5);
+    }
+
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .charts, .bottom { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="brand">SkyCity Auckland | Restaurant Portfolio</div>
+      <div class="toolbar">
+        <span><span class="dot"></span>Live data</span>
+        <span>Power BI style mockup</span>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="side-title">Portfolio filters</div>
+
+        <div class="filter-box">
+          <span class="filter-label">Format</span>
+          <div class="chip-row">
+            <span class="chip">Cafe</span>
+            <span class="chip">QSR</span>
+            <span class="chip">Ghost Kitchen</span>
+            <span class="chip">Full-service</span>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <span class="filter-label">Subregion</span>
+          <div class="chip-row">
+            <span class="chip">North Shore</span>
+            <span class="chip">South Auckland</span>
+            <span class="chip">West Auckland</span>
+            <span class="chip">Central</span>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <span class="filter-label">Cuisine</span>
+          <div class="chip-row">
+            <span class="chip">Burgers</span>
+            <span class="chip">Japanese</span>
+            <span class="chip">Seafood</span>
+            <span class="chip">Italian</span>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <span class="filter-label">Profit status</span>
+          <div class="chip-row">
+            <span class="chip">All</span>
+            <span class="chip">Profitable</span>
+            <span class="chip">Loss-making</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <h1 class="title">SkyCity Auckland | Restaurant Portfolio</h1>
+        <div class="subtitle">Interactive analytics from the regional source dataset.</div>
+
+        <div class="kpis">
+          <div class="kpi">
+            <div class="label">Restaurants</div>
+            <div class="value">1,696</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Revenue</div>
+            <div class="value">$77.74M</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Net profit</div>
+            <div class="value">$7.87M</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Profit margin</div>
+            <div class="value">10.1%</div>
+          </div>
+        </div>
+
+        <div class="info-bar">408 selected restaurants (24.1%) are loss-making.</div>
+
+        <div class="charts">
+          <div class="chart-card">
+            <div class="chart-head">Revenue by operating format</div>
+            <div class="bar-plot">
+              <div class="bar-group">
+                <div class="bar" style="height: 72%;"></div>
+                <div class="label-small">Ghost Kitchen</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 86%;"></div>
+                <div class="label-small">Full-service</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 90%;"></div>
+                <div class="label-small">Cafe</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 100%;"></div>
+                <div class="label-small">QSR</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-head">Channel revenue mix</div>
+            <div class="donut-wrap">
+              <div class="donut"></div>
+            </div>
+            <div class="legends">
+              <div class="legend-item"><span class="swatch" style="background: var(--green);"></span> In-store</div>
+              <div class="legend-item"><span class="swatch" style="background: var(--gold);"></span> Uber Eats</div>
+              <div class="legend-item"><span class="swatch" style="background: var(--blue);"></span> DoorDash</div>
+              <div class="legend-item"><span class="swatch" style="background: var(--red);"></span> Self-delivery</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="chart-card">
+            <div class="chart-head">Profit margin by format</div>
+            <div class="bar-plot" style="height: 170px;">
+              <div class="bar-group">
+                <div class="bar" style="height: 60%; background: linear-gradient(180deg, #bd5b4c, #d18a30);"></div>
+                <div class="label-small">Ghost Kitchen</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 72%; background: linear-gradient(180deg, #d18a30, #155b58);"></div>
+                <div class="label-small">Full-service</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 85%; background: linear-gradient(180deg, #427eaa, #155b58);"></div>
+                <div class="label-small">Cafe</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 92%; background: linear-gradient(180deg, #155b58, #427eaa);"></div>
+                <div class="label-small">QSR</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-head">Revenue and margin by subregion</div>
+            <div class="scatter-box">
+              <div class="axis-x"></div>
+              <div class="axis-y"></div>
+              <div class="point" style="background: var(--green);"></div>
+              <div class="point" style="background: var(--blue);"></div>
+              <div class="point" style="background: var(--gold);"></div>
+              <div class="point" style="background: var(--red);"></div>
+              <div class="point" style="background: var(--green);"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

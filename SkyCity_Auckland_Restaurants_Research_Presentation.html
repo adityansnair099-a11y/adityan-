@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyCity Auckland Restaurants & Bars</title>
+  <style>
+    :root {
+      --navy: #123b5f;
+      --teal: #2d8895;
+      --gold: #d9a441;
+      --light: #f4f7fa;
+      --text: #1f2a37;
+      --muted: #5f6873;
+      --card: #ffffff;
+      --line: #dfe7ee;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #eaf0f5;
+      color: var(--text);
+    }
+    .deck {
+      width: 100%;
+      min-height: 100vh;
+      padding: 36px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slides {
+      width: min(1200px, 95vw);
+      display: grid;
+      gap: 18px;
+    }
+    .slide {
+      position: relative;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(18, 59, 95, 0.12);
+      overflow: hidden;
+      min-height: 620px;
+      padding: 34px 42px 30px;
+    }
+    .topbar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 12px;
+      background: linear-gradient(90deg, var(--navy), var(--teal), var(--gold));
+    }
+    h1, h2, h3, p, li { margin-top: 0; }
+    h1 {
+      font-size: 2.3rem;
+      color: var(--navy);
+      margin: 26px 0 8px;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 1.7rem;
+      color: var(--navy);
+      margin: 18px 0 18px;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 18px;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      background: #fbfcfe;
+    }
+    .panel h3 {
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .highlight {
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(45, 136, 149, 0.12);
+      color: var(--teal);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .footer {
+      position: absolute;
+      bottom: 16px;
+      right: 26px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 900px) {
+      .two-col { grid-template-columns: 1fr; }
+      .slide { min-height: 520px; padding: 28px 22px 30px; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <div class="slides">
+
+      <section class="slide">
+        <div class="topbar"></div>
+        <h1>SkyCity Auckland Restaurants & Bars</h1>
+        <div class="subtitle">Research Paper | Exploratory Data Analysis, Insights, and Strategic Recommendations</div>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Objective</h3>
+            <ul>
+              <li>Assess format, geography, and channel effects on performance</li>
+              <li>Explain how delivery dependence impacts profitability</li>
+              <li>Turn the findings into actionable strategy</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Business focus</h3>
+            <ul>
+              <li>Sales performance</li>
+              <li>Channel economics</li>
+              <li>Cost-to-serve</li>
+              <li>Portfolio optimization</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer">SkyCity Portfolio Review</div>
+      </section>
+
+      <section class="slide">
+        <div class="topbar"></div>
+        <h2>1. Research Objective</h2>
+        <div class="panel">
+          <ul>
+            <li>Evaluate how operating model, restaurant format, and customer location influence sales and profitability.</li>
+            <li>Examine the relationship between digital channel growth, commissions, and delivery cost pressure.</li>
+            <li>Identify clear actions for better portfolio management and more resilient unit economics.</li>
+          </ul>
+        </div>
+        <div class="footer">Objective</div>
+      </section>
+
+      <section class="slide">
+        <div class="topbar"></div>
+        <h2>2. Dataset and Business Context</h2>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Data included</h3>
+            <ul>
+              <li>Cuisine type, format, subregion, and growth factor</li>
+              <li>Monthly orders and average order value</li>
+              <li>Revenue by channel</li>
+              <li>COGS, OPEX, commission rate, and delivery cost</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Why it matters</h3>
+            <ul>
+              <li>Top-line revenue is not enough without margin analysis</li>
+              <li>Delivery increases reach but adds cost and pressure</li>
+              <li>Portfolio strategy depends on unit economics</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer">Context</div>
+      </section>
+
+      <section class="slide">
+        <div class="topbar"></div>
+        <h2>3. Exploratory Findings</h2>
+        <div class="panel">
+          <ul>
+            <li><span class="highlight">Digital growth is a double-edged sword:</span> stronger demand but higher commission and delivery costs.</li>
+            <li><span class="highlight">Format matters:</span> QSR and café models often support repeat ordering and efficient volume.</li>
+            <li><span class="highlight">Location shapes demand:</span> subregions vary in customer behavior and cost-to-serve.</li>
+            <li><span class="highlight">The strongest units:</span> manage AOV, cost discipline, and channel mix together.</li>
+          </ul>
+        </div>
+        <div class="footer">EDA</div>
+      </section>
+
+      <section class="slide">
+        <div class="topbar"></div>
+        <h2>4. Key Insights</h2>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Main performance patterns</h3>
+            <ul>
+              <li>Delivery-heavy stores can lose profit even while growing revenue.</li>
+              <li>High volume does not always mean high profitability.</li>
+              <li>Strong in-store economics are the most resilient base.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Strategic implication</h3>
+            <ul>
+              <li>Portfolio decisions should be guided by contribution margin.</li>
+              <li>Low-margin growth must be challenged with pricing and menu redesign.</li>
+              <li>Best-performing stores balance accessibility and cost discipline.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer">Insights</div>
+      </section>
+
+      <section class="slide">
+        <div class="topbar"></div>
+        <h2>5. Recommendations</h2>
+        <div class="panel">
+          <ul>
+            <li>Protect and expand high-margin in-store channels before over-investing in delivery-heavy growth.</li>
+            <li>Use delivery strategically where it supports acquisition and convenience without margin erosion.</li>
+            <li>Review underperforming restaurants by format, subregion, and commission burden before scaling investment.</li>
+            <li>Improve menu design and pricing architecture to sustain AOV while controlling cost-to-serve.</li>
+          </ul>
+        </div>
+        <div class="footer">Recommendations</div>
+      </section>
+
+      <section class="slide">
+        <div class="topbar"></div>
+        <h2>6. Conclusion</h2>
+        <div class="panel">
+          <ul>
+            <li>Portfolio performance is strongest when growth is aligned with unit-level profitability discipline.</li>
+            <li>The key question is not only how much a store sells, but how much it retains after commissions, delivery costs, and operating expenses.</li>
+            <li>A data-led portfolio strategy can improve profitability by reallocating investment to formats and locations with stronger resilience.</li>
+          </ul>
+        </div>
+        <div class="footer">Conclusion</div>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
